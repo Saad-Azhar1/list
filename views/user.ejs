@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate List</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Rate List</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Color</th>
+                    <th>Weight</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for (let data of seeData) { %>
+                <tr>
+                    <td data-label="Item"><%= data.item %></td>
+                    <td data-label="Color"><%= data.color %></td>
+                    <td data-label="Weight"><%= data.weight %></td>
+                    <td data-label="Price"><%= data.price %></td>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

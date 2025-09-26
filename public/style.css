@@ -1,0 +1,118 @@
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 16px;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        @media (max-width: 600px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+
+            tr {
+                margin-bottom: 15px;
+            }
+
+            td {
+                text-align: right;
+                padding-left: 50%;
+                position: relative;
+            }
+
+            td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 15px;
+                font-weight: bold;
+                text-align: left;
+            }
+
+            th {
+                display: none;
+            }
+        }
+
+
+        /* General button styles */
+button {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Add button */
+form[action="/add/saad"] button {
+    background-color: #28a745;
+    color: white;
+    margin-bottom: 20px;
+}
+
+form[action="/add"] button:hover {
+    background-color: #218838;
+}
+
+/* Edit button */
+form[action*="/edit"] button {
+    background-color: #007bff;
+    color: white;
+}
+
+form[action*="/edit"] button:hover {
+    background-color: #0056b3;
+}
+
+/* Delete button */
+form[action*="/delete"] button {
+    background-color: #dc3545;
+    color: white;
+}
+
+form[action*="/delete"] button:hover {
+    background-color: #c82333;
+}

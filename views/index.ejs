@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <form method="get" action="/add/saad">
+        <button>add</button>
+    </form>
+    <table border="1">
+        <tr>
+            <th>Item</th>
+            <th>Color</th>
+            <th>Weight</th>
+            <th>Price</th>
+            <th>edit</th>
+            <th>Delete</th>
+        </tr>
+        <% for (let data of seeData) { %>
+            <tr>
+                <td>
+                    <%= data.item %>
+                </td>
+                <td>
+                    <%= data.color %>
+                </td>
+                <td>
+                    <%= data.weight%>
+                </td>
+                <td>
+                    <%= data.price %>
+                </td>
+                <td>
+                    <form method="post" action="/list/<%=data._id%>/edit">
+                        <button>edit</button>
+                    </form>
+
+
+                </td>
+                <td>
+                    <form method="post" action="/list/<%=data._id%>/delete">
+                        <button>delete</button>
+                    </form>
+                </td>
+            </tr>
+            <% } %>
+    </table>
+</body>
+
+</html>
